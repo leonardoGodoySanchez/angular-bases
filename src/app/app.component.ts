@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'bases';
+  public title: string = 'Hola Mundo';
+  public counter: number = 10;
+
+  increasyBy(value : number): void //tipado de datos que recibe
+  {
+    this.counter += value;
+  }
+
+  resetBy( )
+  {
+    this.counter = 10;
+  }
 }
+
