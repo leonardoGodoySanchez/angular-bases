@@ -1,0 +1,19 @@
+<h1>DBZ Personajes</h1>
+<hr>
+
+<div class="row"> 
+    <div class="col">
+        <!--ya NO SE NECESITA ANTEPONER APP-- -->
+        <dbz-list [characterList]="characters"
+                    (onDeleteId)="onDeleteCharacter($event)"></dbz-list> 
+                    <!--recibe que lo se emite de list component-->
+    </div>
+    <!-- <div class="col">
+        <app-add-character></app-add-character> colocar agregar personake tarea dejarlo como el listado
+    </div> -->
+    <div class="col">                                           <!-- palabra especializada para recibir eventos emit-->
+        <dbz-agregar-personaje (onNewCharacter)="onNewcharacter($event)">
+            <!--aca se manda la información-->
+        </dbz-agregar-personaje>
+    </div>
+</div>

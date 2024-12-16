@@ -1,0 +1,34 @@
+<h4>Agregar Personaje</h4>
+
+<form class="row" >
+    <!-- cuando tenemos mucha sintaxis ordenamos código-->
+    <input 
+        type="text" 
+        [(ngModel)]="character.name"
+        name="name"
+        class="form-control mb-2" 
+        placeholder="Nombre">
+
+    <input 
+        type="number" 
+        [(ngModel)]="character.power"
+        name="power"
+        class="form-control mb-2" 
+        placeholder="Poder">
+
+    <button type="submit" class="btn btn-primary" (click)="emitCharacter()">
+        Agregar
+    </button>
+
+    <!-- <pre>{{character | json}}</pre> -->
+</form>
+
+<!-- 
+ngModel majeno de formularios, en este caso se realiza con el twoDataBinding
+(click) asocia eventos.....[] asocia atributos......[()] tow data binding
+nos da acceso al objeto en su ultima instancia
+pipe: construye forma del json
+
+form class="row"  (ngsubmit)="emitCharacter";
+
+-->
